@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/movie.css') }}" />
+        <title>Sentimental Analysis</title>
+    </head>
+    <body>
+        <script src="{{ url_for('static', filename='javascript/movie.js') }}"></script>
+        <script>setStats({{stats}})</script>
+        <section>
+            <h2>New Review</h2>
+            <input type="text" name="review" id="txt" placeholder="Enter your review" />
+            <button type="submit" id="btnSubmit" style="margin-left: 1%;">Compute Sentiment</button>
+            <script>initSubmitEvent();</script>
+        </section>
+        <section id="sentimentsection" style="display: none; padding: 30px 20%;"> </section>
+        <section>
+            <h2>Movie Reviews</h2>
+            <div id="reviewcontainer" style="overflow:scroll; height: 500px; width: 100%;">
+                {% for d in data %}
+                    <div class="comment">{{d[1]}}</div>
+                {% endfor %}
+            </div>
+        </section>
+        <script>initFooter();</script>
+    </body>
+</html>
