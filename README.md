@@ -3,7 +3,7 @@ Sentimental Analysis of Movie Reviews using Naive Bayes, Lexicon Predictor and V
 
 Packages
 
-Flask
-vaderSentiment
-nltk
-flask_cors
+Flask <br/>
+vaderSentiment <br/>
+nltk<br/>
+flask_cors<br/>
